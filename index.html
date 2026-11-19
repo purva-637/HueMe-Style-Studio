@@ -1,52 +1,325 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HueMe — Discover Your Colours</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
+<!-- Corrected CSS path -->
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="header"><a class="brand" href="#">hue<span>me.</span></a><nav id="nav"><a href="#how">How it works</a><a href="#seasons">Seasons</a><a href="#finder">Colour finder</a><a href="#studio">Style studio</a><a href="#about">About</a></nav><a class="nav-cta" href="#finder">Find my colours ↗</a><button id="menu" aria-label="Toggle menu">☰</button></header>
+
+<header class="header">
+<a class="brand" href="#">hue<span>me.</span></a>
+<nav id="nav">
+<a href="#how">How it works</a>
+<a href="#seasons">Seasons</a>
+<a href="#finder">Colour finder</a>
+<a href="#studio">Style studio</a>
+<a href="#about">About</a>
+</nav>
+<a class="nav-cta" href="#finder">Find my colours ↗</a>
+<button id="menu" aria-label="Toggle menu">☰</button>
+</header>
+
 <main>
-<section class="hero"><div><p class="eyebrow">PERSONAL COLOUR DISCOVERY</p><h1>Find the colours<br>that feel like <em>you.</em></h1><p class="lead">Explore seasonal palettes, discover real outfit ideas and build a style that feels authentically yours.</p><a class="btn" href="#finder">Discover my palette →</a> <a class="plain-link" href="#studio">Explore real looks ↓</a><p class="note">✳ No rules. No perfect colours. Just a starting point for exploring.</p></div><div class="hero-art"><div class="swatches"><i></i><i></i><i></i><i></i><i></i><i></i></div><small>A PALETTE TO EXPLORE</small><b>soft · warm · earthy</b></div></section>
-<section class="stats"><span><b>4</b> seasonal palettes</span><span><b>Real</b> fashion photography</span><span><b>∞</b> ways to express yourself</span></section>
-<section class="section" id="how"><div class="intro"><p class="eyebrow">A SIMPLE LITTLE JOURNEY</p><h2>Getting to know<br><em>your colours.</em></h2><p>Answer a few questions about your natural colouring and preferences. We'll suggest a seasonal palette you can use as inspiration.</p></div><div class="steps"><article><b>01</b><h3>Tell us a little</h3><p>Share your undertone impression, natural hair and eye colour, and preferences.</p></article><article><b>02</b><h3>Explore your season</h3><p>Get a suggested seasonal family based on your answers, with room to experiment.</p></article><article><b>03</b><h3>Make it yours</h3><p>Browse real outfit photographs, jewellery and accessories.</p></article></div></section>
-<section class="seasons" id="seasons"><div class="intro"><p class="eyebrow">FOUR SEASONAL FAMILIES</p><h2>Four moods.<br><em>Endless possibilities.</em></h2><p>Your palette is a creative starting point, not a set of rules.</p></div><div class="season-grid">
-<article class="spring"><div class="dots"><i></i><i></i><i></i><i></i></div><div><small>FRESH & WARM</small><h3>Spring</h3><p>Peach · coral · fresh green</p></div></article>
-<article class="summer"><div class="dots"><i></i><i></i><i></i><i></i></div><div><small>SOFT & COOL</small><h3>Summer</h3><p>Dusty rose · lavender · blue</p></div></article>
-<article class="autumn"><div class="dots"><i></i><i></i><i></i><i></i></div><div><small>RICH & EARTHY</small><h3>Autumn</h3><p>Olive · rust · warm brown</p></div></article>
-<article class="winter"><div class="dots"><i></i><i></i><i></i><i></i></div><div><small>CLEAR & BOLD</small><h3>Winter</h3><p>Emerald · berry · crisp white</p></div></article>
-</div></section>
-<section class="finder" id="finder"><div class="finder-box"><div id="quiz-heading"><p class="eyebrow">YOUR COLOUR JOURNEY STARTS HERE</p><h2>Let's find your <em>palette.</em></h2></div><div class="progress"><span id="progress"></span></div><p class="step-count" id="stepCount">STEP 1 OF 5</p>
-<form id="quiz">
-<div class="question active"><h3>How would you describe your skin's undertone?</h3><p>Choose your best impression. "Not sure" is completely okay.</p><label><input type="radio" name="undertone" value="warm"> Warm — golden or peachy</label><label><input type="radio" name="undertone" value="cool"> Cool — rosy or pink</label><label><input type="radio" name="undertone" value="neutral"> Neutral — a mix of qualities</label><label><input type="radio" name="undertone" value="unsure"> Not sure</label></div>
-<div class="question"><h3>What is your natural hair colour?</h3><p>Choose the closest description.</p><label><input type="radio" name="hair" value="light"> Light blonde</label><label><input type="radio" name="hair" value="medium"> Medium brown</label><label><input type="radio" name="hair" value="dark"> Dark brown / black</label><label><input type="radio" name="hair" value="red"> Red / auburn</label><label><input type="radio" name="hair" value="grey"> Grey / silver</label></div>
-<div class="question"><h3>Which description feels closest to your natural eye colour?</h3><p>Choose the one you notice most.</p><label><input type="radio" name="eyes" value="light"> Light blue / grey</label><label><input type="radio" name="eyes" value="green"> Green / hazel</label><label><input type="radio" name="eyes" value="brown"> Medium brown</label><label><input type="radio" name="eyes" value="dark"> Dark brown</label></div>
-<div class="question"><h3>How would you describe your natural colouring's contrast?</h3><p>Think about the difference between hair, eyes and skin.</p><label><input type="radio" name="contrast" value="low"> Soft / low contrast</label><label><input type="radio" name="contrast" value="medium"> Medium contrast</label><label><input type="radio" name="contrast" value="high"> High contrast</label></div>
-<div class="question"><h3>Which colour family do you naturally enjoy wearing?</h3><p>There is no right answer.</p><label><input type="radio" name="preference" value="bright"> Bright & clear</label><label><input type="radio" name="preference" value="soft"> Soft & muted</label><label><input type="radio" name="preference" value="earthy"> Earthy & warm</label><label><input type="radio" name="preference" value="cool"> Cool & classic</label></div>
-<div class="controls"><button type="button" id="back" class="secondary" hidden>← Back</button><span id="error" role="alert"></span><button type="button" id="next" class="btn">Continue →</button><button type="submit" id="submit" class="btn" hidden>Reveal my palette ✳</button></div>
-</form>
-<section id="result" hidden><p class="eyebrow">YOUR COLOUR DISCOVERY</p><h2>Your suggested season is <em id="seasonName"></em></h2><p id="description"></p><div id="palette" class="palette"></div><h3>Colour combinations to try</h3><div id="combos" class="combos"></div><p class="disclaimer">This is an educational style suggestion based on your answers, not a definitive colour diagnosis. Lighting, makeup, hair dye and personal preference can change how colours appear. Try colours in natural daylight and trust what you enjoy wearing.</p><button id="restart" class="btn">Try again ↻</button><button id="print" class="secondary">Save / print palette ↗</button></section>
-</div></section>
-<section class="studio" id="studio"><div class="studio-intro"><p class="eyebrow">THE HUE ME STYLE STUDIO</p><h2>Real pieces.<br><em>Real outfit inspiration.</em></h2><p>Browse real fashion photographs of clothing, jewellery, bags and footwear. Filter by category or occasion, then select pieces to build a look you love.</p></div>
-<div class="filters"><label>Category<select id="category"><option value="all">All categories</option><option value="clothing">Clothing</option><option value="jewellery">Jewellery</option><option value="bags">Bags</option><option value="footwear">Footwear</option></select></label><label>Occasion<select id="occasion"><option value="all">All occasions</option><option value="college">College</option><option value="casual">Casual</option><option value="formal">Formal</option><option value="festive">Festive</option></select></label><small>Photos load from Unsplash, so an internet connection is needed.</small></div>
-<div class="products" id="products">
-<article class="product" data-id="0" data-category="clothing" data-occasion="college casual festive" data-name="Traditional outfit"><button class="photo"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=85" alt="Traditional fashion outfit" loading="lazy"><span>Select piece</span></button><div><small>CLOTHING · ETHNIC</small><h3>Traditional outfit</h3><p>Expressive styling for everyday or festive plans.</p></div></article>
-<article class="product" data-id="1" data-category="clothing" data-occasion="college casual" data-name="Everyday outfit"><button class="photo"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85" alt="Everyday fashion outfit" loading="lazy"><span>Select piece</span></button><div><small>CLOTHING · EVERYDAY</small><h3>Everyday outfit</h3><p>An easy look to adapt for classes and casual plans.</p></div></article>
-<article class="product" data-id="2" data-category="clothing" data-occasion="formal festive" data-name="Occasion dress"><button class="photo"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85" alt="Elegant occasion dress" loading="lazy"><span>Select piece</span></button><div><small>CLOTHING · OCCASION</small><h3>Occasion dress</h3><p>A polished option for formal events and celebrations.</p></div></article>
-<article class="product" data-id="3" data-category="jewellery" data-occasion="college casual festive" data-name="Gold-tone earrings"><button class="photo"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85" alt="Gold-tone jewellery" loading="lazy"><span>Select piece</span></button><div><small>JEWELLERY · EARRINGS</small><h3>Gold-tone earrings</h3><p>A warm metallic accent for simple or dressy looks.</p></div></article>
-<article class="product" data-id="4" data-category="jewellery" data-occasion="formal festive" data-name="Layered necklace"><button class="photo"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=85" alt="Necklace jewellery product photograph" loading="lazy"><span>Select piece</span></button><div><small>JEWELLERY · NECKLACE</small><h3>Layered necklace</h3><p>Layered detail to complement a neckline.</p></div></article>
-<article class="product" data-id="5" data-category="bags" data-occasion="college casual formal" data-name="Classic handbag"><button class="photo"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85" alt="Classic handbag" loading="lazy"><span>Select piece</span></button><div><small>BAGS · EVERYDAY</small><h3>Classic handbag</h3><p>A versatile accessory for everyday outfits.</p></div></article>
-<article class="product" data-id="6" data-category="footwear" data-occasion="college casual" data-name="Everyday sneakers"><button class="photo"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85" alt="Casual sneakers" loading="lazy"><span>Select piece</span></button><div><small>FOOTWEAR · CASUAL</small><h3>Everyday sneakers</h3><p>Comfortable footwear inspiration for casual days.</p></div></article>
-<article class="product" data-id="7" data-category="bags" data-occasion="formal festive" data-name="Statement handbag"><button class="photo"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=85" alt="Statement fashion handbag" loading="lazy"><span>Select piece</span></button><div><small>BAGS · OCCASION</small><h3>Statement handbag</h3><p>A finishing touch for a celebration or evening look.</p></div></article>
-<article class="product" data-id="8" data-category="footwear" data-occasion="formal festive" data-name="Occasion footwear"><button class="photo"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=85" alt="Dress footwear" loading="lazy"><span>Select piece</span></button><div><small>FOOTWEAR · OCCASION</small><h3>Occasion footwear</h3><p>A dressier option for parties and special plans.</p></div></article>
+
+<section class="hero">
+<div>
+<p class="eyebrow">PERSONAL COLOUR DISCOVERY</p>
+<h1>Find the colours<br>that feel like <em>you.</em></h1>
+<p class="lead">Explore seasonal palettes, discover real outfit ideas and build a style that feels authentically yours.</p>
+<a class="btn" href="#finder">Discover my palette →</a>
+<a class="plain-link" href="#studio">Explore real looks ↓</a>
+<p class="note">✳ No rules. No perfect colours. Just a starting point for exploring.</p>
 </div>
-<div class="look-board"><div><p class="eyebrow">YOUR STYLE BOARD</p><h3>Build a look <em>you love.</em></h3><p>Select photographs above to add pieces to your inspiration board.</p></div><div id="selected" class="selected"><p>You haven't selected any pieces yet.</p></div><button id="clear" class="secondary">Clear selections ↻</button></div>
+<div class="hero-art">
+<div class="swatches"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<small>A PALETTE TO EXPLORE</small>
+<b>soft · warm · earthy</b>
+</div>
+</section>
+
+<section class="stats">
+<span><b>4</b> seasonal palettes</span>
+<span><b>Real</b> fashion photography</span>
+<span><b>∞</b> ways to express yourself</span>
+</section>
+
+<section class="section" id="how">
+<div class="intro">
+<p class="eyebrow">A SIMPLE LITTLE JOURNEY</p>
+<h2>Getting to know<br><em>your colours.</em></h2>
+<p>Answer a few questions about your natural colouring and preferences. We'll suggest a seasonal palette you can use as inspiration.</p>
+</div>
+<div class="steps">
+<article>
+<b>01</b>
+<h3>Tell us a little</h3>
+<p>Share your undertone impression, natural hair and eye colour, and preferences.</p>
+</article>
+<article>
+<b>02</b>
+<h3>Explore your season</h3>
+<p>Get a suggested seasonal family based on your answers, with room to experiment.</p>
+</article>
+<article>
+<b>03</b>
+<h3>Make it yours</h3>
+<p>Browse real outfit photographs, jewellery and accessories.</p>
+</article>
+</div>
+</section>
+
+<section class="seasons" id="seasons">
+<div class="intro">
+<p class="eyebrow">FOUR SEASONAL FAMILIES</p>
+<h2>Four moods.<br><em>Endless possibilities.</em></h2>
+<p>Your palette is a creative starting point, not a set of rules.</p>
+</div>
+<div class="season-grid">
+<article class="spring">
+<div class="dots"><i></i><i></i><i></i><i></i></div>
+<div><small>FRESH & WARM</small><h3>Spring</h3><p>Peach · coral · fresh green</p></div>
+</article>
+<article class="summer">
+<div class="dots"><i></i><i></i><i></i><i></i></div>
+<div><small>SOFT & COOL</small><h3>Summer</h3><p>Dusty rose · lavender · blue</p></div>
+</article>
+<article class="autumn">
+<div class="dots"><i></i><i></i><i></i><i></i></div>
+<div><small>RICH & EARTHY</small><h3>Autumn</h3><p>Olive · rust · warm brown</p></div>
+</article>
+<article class="winter">
+<div class="dots"><i></i><i></i><i></i><i></i></div>
+<div><small>CLEAR & BOLD</small><h3>Winter</h3><p>Emerald · berry · crisp white</p></div>
+</article>
+</div>
+</section>
+
+<section class="finder" id="finder">
+<div class="finder-box">
+<div id="quiz-heading">
+<p class="eyebrow">YOUR COLOUR JOURNEY STARTS HERE</p>
+<h2>Let's find your <em>palette.</em></h2>
+</div>
+<div class="progress"><span id="progress"></span></div>
+<p class="step-count" id="stepCount">STEP 1 OF 5</p>
+
+<form id="quiz">
+
+<div class="question active">
+<h3>How would you describe your skin's undertone?</h3>
+<p>Choose your best impression. "Not sure" is completely okay.</p>
+<label><input type="radio" name="undertone" value="warm"> Warm — golden or peachy</label>
+<label><input type="radio" name="undertone" value="cool"> Cool — rosy or pink</label>
+<label><input type="radio" name="undertone" value="neutral"> Neutral — a mix of qualities</label>
+<label><input type="radio" name="undertone" value="unsure"> Not sure</label>
+</div>
+
+<div class="question">
+<h3>What is your natural hair colour?</h3>
+<p>Choose the closest description.</p>
+<label><input type="radio" name="hair" value="light"> Light blonde</label>
+<label><input type="radio" name="hair" value="medium"> Medium brown</label>
+<label><input type="radio" name="hair" value="dark"> Dark brown / black</label>
+<label><input type="radio" name="hair" value="red"> Red / auburn</label>
+<label><input type="radio" name="hair" value="grey"> Grey / silver</label>
+</div>
+
+<div class="question">
+<h3>Which description feels closest to your natural eye colour?</h3>
+<p>Choose the one you notice most.</p>
+<label><input type="radio" name="eyes" value="light"> Light blue / grey</label>
+<label><input type="radio" name="eyes" value="green"> Green / hazel</label>
+<label><input type="radio" name="eyes" value="brown"> Medium brown</label>
+<label><input type="radio" name="eyes" value="dark"> Dark brown</label>
+</div>
+
+<div class="question">
+<h3>How would you describe your natural colouring's contrast?</h3>
+<p>Think about the difference between hair, eyes and skin.</p>
+<label><input type="radio" name="contrast" value="low"> Soft / low contrast</label>
+<label><input type="radio" name="contrast" value="medium"> Medium contrast</label>
+<label><input type="radio" name="contrast" value="high"> High contrast</label>
+</div>
+
+<div class="question">
+<h3>Which colour family do you naturally enjoy wearing?</h3>
+<p>There is no right answer.</p>
+<label><input type="radio" name="preference" value="bright"> Bright & clear</label>
+<label><input type="radio" name="preference" value="soft"> Soft & muted</label>
+<label><input type="radio" name="preference" value="earthy"> Earthy & warm</label>
+<label><input type="radio" name="preference" value="cool"> Cool & classic</label>
+</div>
+
+<div class="controls">
+<button type="button" id="back" class="secondary" hidden>← Back</button>
+<span id="error" role="alert"></span>
+<button type="button" id="next" class="btn">Continue →</button>
+<button type="submit" id="submit" class="btn" hidden>Reveal my palette ✳</button>
+</div>
+</form>
+
+<section id="result" hidden>
+<p class="eyebrow">YOUR COLOUR DISCOVERY</p>
+<h2>Your suggested season is <em id="seasonName"></em></h2>
+<p id="description"></p>
+<div id="palette" class="palette"></div>
+<h3>Colour combinations to try</h3>
+<div id="combos" class="combos"></div>
+<p class="disclaimer">This is an educational style suggestion based on your answers, not a definitive colour diagnosis. Lighting, makeup, hair dye and personal preference can change how colours appear. Try colours in natural daylight and trust what you enjoy wearing.</p>
+<button id="restart" class="btn">Try again ↻</button>
+<button id="print" class="secondary">Save / print palette ↗</button>
+</section>
+</div>
+</section>
+
+<section class="studio" id="studio">
+<div class="studio-intro">
+<p class="eyebrow">THE HUE ME STYLE STUDIO</p>
+<h2>Real pieces.<br><em>Real outfit inspiration.</em></h2>
+<p>Browse real fashion photographs of clothing, jewellery, bags and footwear. Filter by category or occasion, then select pieces to build a look you love.</p>
+</div>
+
+<div class="filters">
+<label>Category
+<select id="category">
+<option value="all">All categories</option>
+<option value="clothing">Clothing</option>
+<option value="jewellery">Jewellery</option>
+<option value="bags">Bags</option>
+<option value="footwear">Footwear</option>
+</select>
+</label>
+<label>Occasion
+<select id="occasion">
+<option value="all">All occasions</option>
+<option value="college">College</option>
+<option value="casual">Casual</option>
+<option value="formal">Formal</option>
+<option value="festive">Festive</option>
+</select>
+</label>
+<small>Photos load from Unsplash, so an internet connection is needed.</small>
+</div>
+
+<div class="products" id="products">
+
+<article class="product" data-id="0" data-category="clothing" data-occasion="college casual festive" data-name="Traditional outfit">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=85" alt="Traditional fashion outfit" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>CLOTHING · ETHNIC</small><h3>Traditional outfit</h3><p>Expressive styling for everyday or festive plans.</p></div>
+</article>
+
+<article class="product" data-id="1" data-category="clothing" data-occasion="college casual" data-name="Everyday outfit">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85" alt="Everyday fashion outfit" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>CLOTHING · EVERYDAY</small><h3>Everyday outfit</h3><p>An easy look to adapt for classes and casual plans.</p></div>
+</article>
+
+<article class="product" data-id="2" data-category="clothing" data-occasion="formal festive" data-name="Occasion dress">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85" alt="Elegant occasion dress" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>CLOTHING · OCCASION</small><h3>Occasion dress</h3><p>A polished option for formal events and celebrations.</p></div>
+</article>
+
+<article class="product" data-id="3" data-category="jewellery" data-occasion="college casual festive" data-name="Gold-tone earrings">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=85" alt="Gold-tone jewellery" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>JEWELLERY · EARRINGS</small><h3>Gold-tone earrings</h3><p>A warm metallic accent for simple or dressy looks.</p></div>
+</article>
+
+<article class="product" data-id="4" data-category="jewellery" data-occasion="formal festive" data-name="Layered necklace">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=700&q=85" alt="Necklace jewellery product photograph" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>JEWELLERY · NECKLACE</small><h3>Layered necklace</h3><p>Layered detail to complement a neckline.</p></div>
+</article>
+
+<article class="product" data-id="5" data-category="bags" data-occasion="college casual formal" data-name="Classic handbag">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85" alt="Classic handbag" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>BAGS · EVERYDAY</small><h3>Classic handbag</h3><p>A versatile accessory for everyday outfits.</p></div>
+</article>
+
+<article class="product" data-id="6" data-category="footwear" data-occasion="college casual" data-name="Everyday sneakers">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85" alt="Casual sneakers" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>FOOTWEAR · CASUAL</small><h3>Everyday sneakers</h3><p>Comfortable footwear inspiration for casual days.</p></div>
+</article>
+
+<article class="product" data-id="7" data-category="bags" data-occasion="formal festive" data-name="Statement handbag">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=85" alt="Statement fashion handbag" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>BAGS · OCCASION</small><h3>Statement handbag</h3><p>A finishing touch for a celebration or evening look.</p></div>
+</article>
+
+<article class="product" data-id="8" data-category="footwear" data-occasion="formal festive" data-name="Occasion footwear">
+<button class="photo">
+<img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=85" alt="Dress footwear" loading="lazy">
+<span>Select piece</span>
+</button>
+<div><small>FOOTWEAR · OCCASION</small><h3>Occasion footwear</h3><p>A dressier option for parties and special plans.</p></div>
+</article>
+
+</div>
+
+<div class="look-board">
+<div>
+<p class="eyebrow">YOUR STYLE BOARD</p>
+<h3>Build a look <em>you love.</em></h3>
+<p>Select photographs above to add pieces to your inspiration board.</p>
+</div>
+<div id="selected" class="selected">
+<p>You haven't selected any pieces yet.</p>
+</div>
+<button id="clear" class="secondary">Clear selections ↻</button>
+</div>
+
 <p class="fine-print">HueMe uses fashion photographs as visual references. Images are hosted by a third-party provider and do not represent guaranteed products, prices or availability. This feature does not digitally dress or alter a person's photograph.</p>
 </section>
-<section class="about" id="about"><div class="about-logo">h.</div><div><p class="eyebrow">A NOTE FROM HUE ME</p><h2>Colour is for <em>everyone.</em></h2><p>There are no colours you are forbidden to wear. Use your palette as inspiration, then make your own rules.</p></div></section>
-</main><footer><a class="brand" href="#">hue<span>me.</span></a><span>Made for every shade of you. ✳</span><span>© 2026 HueMe</span></footer>
-<script src="js/script.js"></script>
-</body></html>
+
+<section class="about" id="about">
+<div class="about-logo">h.</div>
+<div>
+<p class="eyebrow">A NOTE FROM HUE ME</p>
+<h2>Colour is for <em>everyone.</em></h2>
+<p>There are no colours you are forbidden to wear. Use your palette as inspiration, then make your own rules.</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<a class="brand" href="#">hue<span>me.</span></a>
+<span>Made for every shade of you. ✳</span>
+<span>© 2026 HueMe</span>
+</footer>
+
+<!-- Corrected JavaScript path -->
+<script src="script.js"></script>
+
+</body>
+</html>
